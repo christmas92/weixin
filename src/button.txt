@@ -1,0 +1,84 @@
+{
+    "button": [ 
+        {
+            "name": "关于我们", 
+            "sub_button": [
+                {
+                   "type":"click",
+                   "name":"约稿函",
+                   "key":"ygh"
+                }, 
+                {
+                    "type": "click", 
+                    "name": "公司简介", 
+                    "key": "gsjj"
+                }, 
+                {
+                    "type": "click", 
+                    "name": "诚聘英才", 
+                    "key": "cpyc"
+                },
+                {
+                    "type": "click", 
+                    "name": "联系我们", 
+                    "key": "lxwm"
+                },
+                {
+                    "type": "click", 
+                    "name": "快查档", 
+                    "key": "kcd"
+                }
+            ]
+        },
+        {
+            "name": "律事资讯", 
+            "sub_button": [
+                {
+                   "type":"view",
+                   "name":"今日法律晨读",
+                   "url":"http://mp.weixin.qq.com/mp/homepage?__biz=MzAwNzQxNzM2MQ==&hid=1&sn=1f69eb7fdf28c3a85102604c64f2e6b2#wechat_redirect"
+                }, 
+                {
+                   "type":"view",
+                   "name":"圆桌会",
+                   "url":"http://mp.weixin.qq.com/mp/homepage?__biz=MzAwNzQxNzM2MQ==&hid=2&sn=dc8e7ba446af9f8c34fd394721b789af#wechat_redirect"
+                }, 
+                {
+                   "type":"view",
+                   "name":"推荐阅读",
+                   "url":"http://mp.weixin.qq.com/mp/homepage?__biz=MzAwNzQxNzM2MQ==&hid=3&sn=9a424b8b704dd5891460a1f2395f5921#wechat_redirect"
+                },
+                {
+                   "type":"view",
+                   "name":"律所招聘",
+                   "url":"http://mp.weixin.qq.com/mp/homepage?__biz=MzAwNzQxNzM2MQ==&hid=4&sn=b86d09781979e0d381cec9e31f5bda0a#wechat_redirect"
+                }
+            ]
+        },
+        {
+            "name": "律事精彩", 
+            "sub_button": [
+                {
+                   "type":"click",
+                   "name":"梦想合伙人",
+                   "key":"mxhhr"
+                },  
+                {
+                   "type":"click",
+                   "name":"律公益",
+                   "key":"lgy"
+                },
+                {
+                   "type":"view",
+                   "name":"沙龙",
+                   "url":"http://mp.weixin.qq.com/mp/homepage?__biz=MzAwNzQxNzM2MQ==&hid=5&sn=72332a3255eb185a3b7342762fbf8814#wechat_redirect"
+                },
+                {
+                   "type":"click",
+                   "name":"职规赛投票通道",
+                   "key":"tp"
+                }
+            ]
+        }
+    ]
+}
