@@ -1,12 +1,7 @@
 package com.cyf.weixin.service;
 
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
-
-import org.dom4j.Document;
-import org.dom4j.Element;
 
 import com.cyf.util.DEC;
 import com.cyf.util.XmlUtil;
@@ -15,26 +10,24 @@ import com.cyf.weixin.message.NewsMsg;
 import com.cyf.weixin.message.TextMsg;
 import com.cyf.weixin.str.Context;
 import com.cyf.weixin.str.News;
+import com.cyf.weixin.util.SignUtil;
 
 public class WeiXinService {
-	@SuppressWarnings("unchecked")
-	private HashMap<String, String> parseRequestXml(HttpServletRequest request) throws Exception{  
-
-        HashMap<String, String> map = new HashMap<String, String>();    
-        Document document = XmlUtil.createXML(request);  
-
-        Element root = document.getRootElement();    
-
-        List<Element> elementList = root.elements();    
-          
-        for (Element e : elementList){  
-            map.put(e.getName(), e.getText());  
+	
+	//初始接口配置校验
+	public String check(HttpServletRequest request) {   
+        String signature = request.getParameter("signature");  
+        String timestamp = request.getParameter("timestamp");
+        String nonce = request.getParameter("nonce");
+        String echostr = request.getParameter("echostr");
+        if (SignUtil.checkSignature(signature, timestamp, nonce)) {  
+            return echostr;  
         }  
-        return map;    
+        return null;  
     }
 	
 	public String replay(HttpServletRequest request) throws Exception{
-		Map<String, String> map = parseRequestXml(request);
+		Map<String, String> map = XmlUtil.parseRequestXml(request);
 		if(map == null){
 			return "";
 		}
